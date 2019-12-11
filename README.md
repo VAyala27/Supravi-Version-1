@@ -1,2 +1,2 @@
 # Online Shopping Site
-Simple online website with html, css, and javascript
+Simple online shopping website with html, css, and javascript
