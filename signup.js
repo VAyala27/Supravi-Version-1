@@ -42,6 +42,6 @@ function registerUser() {
   myStorage = DumpUsers;
   DumpUsers.push(newUser);
   localStorage.setItem("myStorage", JSON.stringify(DumpUsers));
-  window.location.replace("index.html");
+  window.location.replace("login.html");
 }
 registerBtn.addEventListener("click", registerUser);
