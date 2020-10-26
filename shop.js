@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var removeCartItemBtn = document.querySelectorAll(".remove-btn");
   for (var i = 0; i < removeCartItemBtn; i++) {
     var button = removeCartItemBtn[i];
@@ -55,6 +55,7 @@ $(document).ready(function() {
 
   var checkout = document.getElementsByClassName("btn-purchase")[0];
   checkout.addEventListener("click", updateCartTotal);
+
   function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName("cart-items")[0];
     var cartRows = cartItemContainer.getElementsByClassName("cart-row");
@@ -72,31 +73,15 @@ $(document).ready(function() {
   }
 
   function removeCartItems() {
-    $(".remove-btn").click(function() {
+    $(".remove-btn").click(function () {
       $(this)
         .parent()
         .parent()
         .parent()
-        .fadeOut("normal", function() {
+        .fadeOut("normal", function () {
           $(this).remove();
           return;
         });
     });
   }
-
-  var toggle = document.querySelector(".toggler");
-  var nav = document.querySelector(".navbar");
-  toggle.addEventListener("click", function() {
-    nav.classList.toggle("active");
-  });
-
-  var dropDownbtn = document.querySelectorAll(".drop-down");
-  var dropdown = document.querySelectorAll(".nav-dropdown");
-  dropDownbtn.forEach(function(button) {
-    dropdown.forEach(function(dropdown) {
-      button.addEventListener("click", function(event) {
-        event.target = dropdown.classList.toggle("active");
-      });
-    });
-  });
 });
